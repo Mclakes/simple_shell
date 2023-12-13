@@ -38,7 +38,7 @@ char **splitstring(char *str, const char *delim)
 	while (token)
 	{
 		token = strtok(NULL, delim);
-		array = _reallocate(array, (sizeof(char *) * (wn - 1)), (sizeof(char *) * wn));
+		array = _reall(array, (sizeof(char *) * (wn - 1)), (sizeof(char *) * wn));
 		array[n] = _strdup(token);
 		n++;
 		wn++;
@@ -74,14 +74,14 @@ void to_execute(char **argv)
 }
 
 /**
- * _reallocate - Reallocates memory block
+ * _reall - Reallocates memory block
  * @ptr: previous pointer
  * @old_size: old size of previous pointer
  * @new_size: new size for our pointer
  * Return: New resized Pointer
  */
 
-void *_reallocate(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_reall(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *current;
 	char *former;

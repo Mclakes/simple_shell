@@ -20,7 +20,7 @@ char *concat_all(char *name, char *sep, char *value);
 
 char **splitstring(char *str, const char *delim);
 void to_execute(char **argv);
-void *_reallocate(void *ptr, unsigned int old_size, unsigned int new_size);
+void *_reall(void *ptr, unsigned int old_size, unsigned int new_size);
 
 extern char **environ;
 
