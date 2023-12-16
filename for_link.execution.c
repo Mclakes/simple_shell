@@ -2,8 +2,7 @@
 
 
 /**
- * _getenvr - gets the quaantity of the global variable
- *
+ * _getenvr - gets the value of the global variable
  * @name: name of the global variable
  * Return: string of value
  */
@@ -38,9 +37,9 @@ char *_getenvr(const char *name)
 
 
 /**
- * add_node_end - adds a new node at the finished list
- * @head: pointer to pointer to the linked list
- * @str: pointer to string in prev first node
+ * add_node_end - adds a new node at the end of a list_t list
+ * @head: pointer to pointer to our linked list
+ * @str: pointer to string in previous first node
  * Return: address of the new element/node
  */
 
@@ -82,9 +81,9 @@ list_path *add_node_end(list_path **head, char *str)
 
 
 /**
- * linkpath - creates a linked to path directories
- * @path: string of path value checked
- * Return: points to created linked list
+ * linkpath - creates a linked list for path directories
+ * @path: string of path value
+ * Return: pointer to the created linked list
  */
 list_path *linkpath(char *path)
 {
@@ -103,9 +102,9 @@ list_path *linkpath(char *path)
 }
 
 /**
- * _which - finds the name of the path of the file's name
- * @filename: name of file or command typed
- * @head: path directories head of linked list
+ * _which - finds the pathname of a filename
+ * @filename: name of file or command
+ * @head: head of linked list of path directories
  * Return: pathname of filename or NULL if no match
  */
 char *_which(char *filename, list_path *head)
@@ -131,7 +130,7 @@ char *_which(char *filename, list_path *head)
 }
 
 /**
- * to_free_list - to_frees a list_t
+ * to_free_list - frees a list_t
  *@head: pointer to our linked list
  */
 void to_free_list(list_path *head)

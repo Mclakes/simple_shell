@@ -32,3 +32,4 @@ void(*checkingbuild(char **arv))(char **arv)
 	}
 	return (0);
 }
+

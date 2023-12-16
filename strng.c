@@ -1,14 +1,14 @@
 #include "shell.h"
 
 /**
- * _strdup - returns a ptr to a newly alloc space in mem, of  which
- * contains a copy of the str given as a parameter
- * @str: ptr to a str
- * Return: ptr to a str
+ * _strdup - returns a pointer to a newly allocated space in memory, which
+ * contains a copy of the string given as a parameter
+ * @str: pointer to a string
+ * Return: pointer to a string
  */
 char *_strdup(char *str)
 {
-	int n, l;
+	int i, l;
 	char *new;
 
 	if (!str)
@@ -24,20 +24,20 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	for (n = 0; n < l; n++)
+	for (i = 0; i < l; i++)
 	{
-		new[n] = str[n];
+		new[i] = str[i];
 	}
 	new[l] = str[l];
 	return (new);
 }
 
 /**
- * concat_all - concatenates 3 str in a newly alloc mem
- * @name: first str
- * @sep: second str
- * @value: Third str
- * Return: pointer to the new str
+ * concat_all - concats 3 strings in a newly allocated memory
+ * @name: first string
+ * @sep: second string
+ * @value: Third string
+ * Return: pointer to the new string
  */
 char *concat_all(char *name, char *sep, char *value)
 {
@@ -70,19 +70,19 @@ char *concat_all(char *name, char *sep, char *value)
 }
 
 /**
- * _strlen - the sting length
- * @s: ptr to the str
- * Return: the length of str
+ * _strlen - it gives the length of a string
+ * @s: pointer to the string
+ * Return: the length of string
  */
 int _strlen(char *s)
 {
-	int n = 0;
+	int i = 0;
 
-	while (*(s + n) != '\0')
+	while (*(s + i) != '\0')
 	{
-		n++;
+		i++;
 	}
-	return (n);
+	return (i);
 }
 
 /**
@@ -98,8 +98,8 @@ int _putchar(char c)
 }
 
 /**
- * _puts - prints a str
- * @str: pointer to str
+ * _puts - prints a string
+ * @str: pointer to string
  */
 
 void _puts(char *str)
